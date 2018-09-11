@@ -17,16 +17,19 @@ var writeConsole = function(question, answer, c) {
             break;
         case -1:
             correct = 'invalid response';
+            break;
+        default:
+            correct = 'internal error';
     }
     console.log('Q: ' + question);
-    console.log('A: ' + answer + ' - ' + correct);
+    console.log('A: ' + answer + ' (' + correct + ')');
 };
 var correct = 0;
 var response = '';
 var answer1 = prompt(question1);
 if ((answer1.toLowerCase() === 'yes') || (answer1.toLowerCase() === 'y')) {
     response = 'Yes, that was an easy one to start with.';
-    correct = '1';
+    correct = 1;
 } else if ((answer1.toLowerCase() === 'no') || (answer1.toLowerCase() === 'n'))  {
     response = 'No, sorry. Are you taking this seriously?';
     correct = 0;
@@ -34,8 +37,8 @@ if ((answer1.toLowerCase() === 'yes') || (answer1.toLowerCase() === 'y')) {
     response = invalidResponse;
     correct = '-1';
 }
-alert(response);
 writeConsole(question1, answer1, correct);
+alert(response);
 var answer2 = prompt(question2);
 if ((answer2.toLowerCase() === 'yes') || (answer2.toLowerCase() === 'y')) {
     response = 'Yes, that\'s correct. My boys are 10 and 15.';
@@ -47,12 +50,12 @@ if ((answer2.toLowerCase() === 'yes') || (answer2.toLowerCase() === 'y')) {
     response = invalidResponse;
     correct = -1;
 }
-alert(response);
 writeConsole(question2, answer2, correct);
+alert(response);
 var answer3 = prompt(question3);
 if ((answer3.toLowerCase() === 'yes') || (answer3.toLowerCase() === 'y')) {
     response = 'No, not really. I\'m interested in trying it out, though.';
-    correct = -1;
+    correct = 0;
 } else if ((answer3.toLowerCase() === 'no') || (answer3.toLowerCase() === 'n'))  {
     response = 'That\'s right. I\'m interested in rock climbing, but haven\'t really done it yet.';
     correct = 1;
@@ -60,12 +63,12 @@ if ((answer3.toLowerCase() === 'yes') || (answer3.toLowerCase() === 'y')) {
     response = invalidResponse;
     correct = -1;
 }
-alert(response);
 writeConsole(question3, answer3, correct);
+alert(response);
 var answer4 = prompt(question4);
 if ((answer4.toLowerCase() === 'yes') || (answer4.toLowerCase() === 'y')) {
     response = 'No, not at all. Pizza is pretty good, but tacos are far superior.';
-    correct = -1;
+    correct = 0;
 } else if ((answer4.toLowerCase() === 'no') || (answer4.toLowerCase() === 'n'))  {
     response = 'That\'s right. Tacos are clearly better than pizza.';
     correct = 1;
@@ -73,8 +76,8 @@ if ((answer4.toLowerCase() === 'yes') || (answer4.toLowerCase() === 'y')) {
     response = invalidResponse;
     correct = -1;
 }
-alert(response);
 writeConsole(question4, answer4, correct);
+alert(response);
 var answer5 = prompt(question5);
 if ((answer5.toLowerCase() === 'yes') || (answer5.toLowerCase() === 'y')) {
     response = 'Haha! No, that was a trick question. I\'ve never been on TV.';
@@ -86,5 +89,5 @@ if ((answer5.toLowerCase() === 'yes') || (answer5.toLowerCase() === 'y')) {
     response = invalidResponse;
     correct = -1;
 }
-alert(response);
 writeConsole(question5, answer5, correct);
+alert(response);
