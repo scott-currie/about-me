@@ -6,10 +6,10 @@ var question4 = 'Do I prefer pizza over tacos?';
 var question5 = 'Do you recognize me from my appearance on Law & Order?';
 var invalidResponse = 'Sorry. I couldn\'t understand your response.';
 
-var writeConsole = function (question, answer, c) {
+var writeConsole = function (question, answer, answerStatus) {
   // Accepts question, answer, and the answer's status as parameters.
   var correct = '';
-  switch (c) {
+  switch (answerStatus) {
     case 0:
       correct = 'incorrect';
       break;
