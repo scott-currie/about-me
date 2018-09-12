@@ -34,7 +34,7 @@ if ((answer1.toLowerCase() === 'yes') || (answer1.toLowerCase() === 'y')) {
   correct = 0;
 } else {
   response = invalidResponse;
-  correct = '-1';
+  correct = -1;
 }
 writeConsole(question1, answer1, correct);
 alert(response);
