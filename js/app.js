@@ -16,7 +16,7 @@ var writeConsole = function (question, answer, answerStatus) {
     case 1:
       correct = 'correct';
       break;
-    case -1:
+    default:
       correct = 'invalid response';
       break;
   }
